@@ -52,7 +52,7 @@
     var sqft = l.LivingArea ? Math.round(l.LivingArea).toLocaleString('en-CA') + ' sqft' : null;
     var details = [beds, baths, sqft].filter(Boolean).map(function (d) { return '<span>' + d + '</span>'; }).join('');
     var city = l.City || '';
-    return '<a href="/listing?id=' + encodeURIComponent(l.ListingKey || '') + '" class="listing-card">' +
+    return '<a href="https://kelownalistings.com/listing?id=' + encodeURIComponent(l.ListingKey || '') + '" target="_blank" rel="noopener" class="listing-card">' +
       '<div class="listing-photo" style="' + photoStyle + '"><span class="listing-badge">Active</span></div>' +
       '<div class="listing-body">' +
       '<div class="listing-price">' + formatPrice(l.ListPrice) + '</div>' +
