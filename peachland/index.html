@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downsizing in Peachland, BC | Single-Level Homes &amp; 55+ Communities</title>
+<meta name="description" content="Downsizing in Peachland, BC — single-level homes, ranchers, condos, and 55+ communities. Live MLS® listings updated daily.">
+<link rel="canonical" href="https://kelownadownsizing.com/peachland">
+<meta property="og:title" content="Downsizing in Peachland, BC | Single-Level Homes & 55+ Communities">
+<meta property="og:description" content="Downsizing in Peachland, BC — single-level homes, ranchers, condos, and 55+ communities. Live MLS® listings updated daily.">
+<meta property="og:url" content="https://kelownadownsizing.com/peachland">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script src="/schema.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KELOWNA<span>DOWNSIZING</span></a>
+  <div class="nav-links">
+    <a href="/single-level-homes">Single-Level Homes</a>
+    <a href="/55-plus-communities">55+ Communities</a>
+    <a href="/guide">Free Guide</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="/#valuation" class="nav-cta">Free Valuation</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/single-level-homes" onclick="toggleMenu()">Single-Level Homes</a>
+  <a href="/55-plus-communities" onclick="toggleMenu()">55+ Communities</a>
+  <a href="/guide" onclick="toggleMenu()">Free Downsizing Guide</a>
+  <a href="/blog" onclick="toggleMenu()">Blog</a>
+  <a href="/contact" onclick="toggleMenu()">Contact</a>
+  <a href="/#valuation" onclick="toggleMenu()">Free Valuation</a>
+</div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">Kelowna Downsizing</a> / Peachland</div>
+  <h1>Downsizing in Peachland</h1>
+  <p>A small, lake-hugging community popular with retirees for its slower pace and lower cost of living.</p>
+</div>
+
+<section class="section">
+  <div class="article-content" style="max-width:820px;margin:0 auto 44px">
+    <p>Peachland is a small municipality on the west shore of Okanagan Lake, south of West Kelowna, with a walkable downtown right on the water and a noticeably slower pace than Kelowna. It's long been popular with retirees specifically for that reason — small-town feel, lake views from many properties, and a generally lower cost of living than Kelowna proper.</p>
+    <p>The trade-off is distance: Peachland is further from Kelowna's hospital and larger shopping centres than West Kelowna is, typically 25-35 minutes depending on traffic. For downsizers who value quiet and affordability over quick access to a big city, that trade is often a welcome one — and Peachland's housing stock includes a meaningful number of single-level homes and condos suited to exactly that lifestyle.</p>
+  </div>
+
+  <div class="listings-header">
+    <div class="section-eyebrow">Live MLS® Data</div>
+    <h2 class="section-title">Current Listings in Peachland</h2>
+    <div id="listings-count" style="font-size:15px;color:var(--muted)">Loading listings…</div>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" data-role="type" onclick="setPropertyType(this,'all')">All Types</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'rancher')">Ranchers &amp; Bungalows</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'condo')">Condos</button>
+    <select class="filter-select" id="f-price" onchange="filterPrice(this)">
+      <option value="">Any Price</option>
+      <option value="0-400000">Under $400K</option>
+      <option value="400000-600000">$400K – $600K</option>
+      <option value="600000-850000">$600K – $850K</option>
+      <option value="850000-99999999">$850K+</option>
+    </select>
+    <button class="filter-reset" onclick="resetDownsizingFilters()">Reset</button>
+  </div>
+
+  <div class="listings-grid" id="listings-grid">
+    <div class="listings-status">Loading listings…</div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="section" style="max-width:820px">
+    <div class="section-eyebrow" style="text-align:center">Common Questions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:44px">Downsizing in Peachland — FAQ</h2>
+    <div>
+      <details class="faq-item">
+        <summary>Is Peachland good for retirees?</summary>
+        <div class="faq-a">Yes — Peachland has long been popular with retirees for its small-town, walkable downtown, lake views, and lower cost of living compared to Kelowna, though it sits further from Kelowna's hospital and major shopping than West Kelowna does.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How far is Peachland from Kelowna?</summary>
+        <div class="faq-a">Peachland is typically a 25-35 minute drive from central Kelowna, depending on traffic and the exact starting point.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Thinking about Peachland?</h2>
+  <p>Mark Jontz &amp; Associates helps downsizers across the whole Central Okanagan — including Peachland. Get a straight answer on what fits your budget.</p>
+  <a href="/contact" class="btn-white">Talk to the Team →</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">KELOWNA<span>DOWNSIZING</span></div>
+      <p class="footer-desc">The Okanagan's dedicated downsizing resource — single-level homes, ranchers, condos, and 55+/45+ communities across Kelowna, West Kelowna, Lake Country &amp; Peachland.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Listings</div>
+      <ul class="footer-links">
+        <li><a href="/single-level-homes">Single-Level Homes</a></li>
+        <li><a href="/55-plus-communities">55+ Communities</a></li>
+        <li><a href="/guide">Free Downsizing Guide</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Areas</div>
+      <ul class="footer-links">
+        <li><a href="/west-kelowna">West Kelowna</a></li>
+        <li><a href="/lake-country">Lake Country</a></li>
+        <li><a href="/peachland">Peachland</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:12508616002">250-861-6002</a></li>
+        <li><a href="mailto:info@markjontz.com">info@markjontz.com</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 KelownaDownsizing.com — Mark Jontz &amp; Associates | Royal LePage Kelowna. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar">
+  <a href="tel:12508616002" class="sticky-cta-btn sticky-cta-call">📞 Call Now</a>
+  <a href="sms:12508616002" class="sticky-cta-btn sticky-cta-text">💬 Text Us</a>
+</div>
+
+<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+<script src="/listings.js"></script>
+<script>window.initDownsizingListings('all', 'Peachland');</script>
+</body>
+</html>

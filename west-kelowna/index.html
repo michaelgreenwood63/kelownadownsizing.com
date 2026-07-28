@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downsizing in West Kelowna, BC | Single-Level Homes &amp; 55+ Communities</title>
+<meta name="description" content="Downsizing in West Kelowna, BC — single-level homes, ranchers, condos, and 55+ communities. Live MLS® listings updated daily.">
+<link rel="canonical" href="https://kelownadownsizing.com/west-kelowna">
+<meta property="og:title" content="Downsizing in West Kelowna, BC | Single-Level Homes & 55+ Communities">
+<meta property="og:description" content="Downsizing in West Kelowna, BC — single-level homes, ranchers, condos, and 55+ communities. Live MLS® listings updated daily.">
+<meta property="og:url" content="https://kelownadownsizing.com/west-kelowna">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script src="/schema.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KELOWNA<span>DOWNSIZING</span></a>
+  <div class="nav-links">
+    <a href="/single-level-homes">Single-Level Homes</a>
+    <a href="/55-plus-communities">55+ Communities</a>
+    <a href="/guide">Free Guide</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="/#valuation" class="nav-cta">Free Valuation</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/single-level-homes" onclick="toggleMenu()">Single-Level Homes</a>
+  <a href="/55-plus-communities" onclick="toggleMenu()">55+ Communities</a>
+  <a href="/guide" onclick="toggleMenu()">Free Downsizing Guide</a>
+  <a href="/blog" onclick="toggleMenu()">Blog</a>
+  <a href="/contact" onclick="toggleMenu()">Contact</a>
+  <a href="/#valuation" onclick="toggleMenu()">Free Valuation</a>
+</div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">Kelowna Downsizing</a> / West Kelowna</div>
+  <h1>Downsizing in West Kelowna</h1>
+  <p>Across the bridge from Kelowna, with its own single-level and 55+ options at a lower price point.</p>
+</div>
+
+<section class="section">
+  <div class="article-content" style="max-width:820px;margin:0 auto 44px">
+    <p>West Kelowna became its own incorporated city in 2007, separating from the regional district to govern its own growth on the west side of Okanagan Lake, connected to downtown Kelowna by the William R. Bennett Bridge. It's grown quickly since then, but it's kept a distinct identity from Kelowna proper — generally a lower cost of living, more room between neighbours, and a slower pace, while still being a short drive across the bridge to Kelowna's shopping, medical care, and amenities.</p>
+    <p>For downsizers, West Kelowna's appeal is straightforward: housing costs typically run lower than equivalent properties in Kelowna, with a similar range of ranchers, condos, and townhomes to choose from. Areas like Lakeview Heights and Rose Valley have an established, quieter feel that many retirees find appealing, while still being close enough to Kelowna to keep the same doctors, friends, and routines.</p>
+  </div>
+
+  <div class="listings-header">
+    <div class="section-eyebrow">Live MLS® Data</div>
+    <h2 class="section-title">Current Listings in West Kelowna</h2>
+    <div id="listings-count" style="font-size:15px;color:var(--muted)">Loading listings…</div>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" data-role="type" onclick="setPropertyType(this,'all')">All Types</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'rancher')">Ranchers &amp; Bungalows</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'condo')">Condos</button>
+    <select class="filter-select" id="f-price" onchange="filterPrice(this)">
+      <option value="">Any Price</option>
+      <option value="0-400000">Under $400K</option>
+      <option value="400000-600000">$400K – $600K</option>
+      <option value="600000-850000">$600K – $850K</option>
+      <option value="850000-99999999">$850K+</option>
+    </select>
+    <button class="filter-reset" onclick="resetDownsizingFilters()">Reset</button>
+  </div>
+
+  <div class="listings-grid" id="listings-grid">
+    <div class="listings-status">Loading listings…</div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="section" style="max-width:820px">
+    <div class="section-eyebrow" style="text-align:center">Common Questions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:44px">Downsizing in West Kelowna — FAQ</h2>
+    <div>
+      <details class="faq-item">
+        <summary>Is West Kelowna cheaper than Kelowna for downsizing?</summary>
+        <div class="faq-a">Generally, yes — West Kelowna's housing costs typically run somewhat lower than comparable properties in Kelowna proper, which is one of the main reasons downsizers consider crossing the bridge.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How far is West Kelowna from Kelowna?</summary>
+        <div class="faq-a">West Kelowna is directly across Okanagan Lake from Kelowna, connected by the William R. Bennett Bridge — typically a 10-20 minute drive depending on the exact starting and ending points and traffic.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Thinking about West Kelowna?</h2>
+  <p>Mark Jontz &amp; Associates helps downsizers across the whole Central Okanagan — including West Kelowna. Get a straight answer on what fits your budget.</p>
+  <a href="/contact" class="btn-white">Talk to the Team →</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">KELOWNA<span>DOWNSIZING</span></div>
+      <p class="footer-desc">The Okanagan's dedicated downsizing resource — single-level homes, ranchers, condos, and 55+/45+ communities across Kelowna, West Kelowna, Lake Country &amp; Peachland.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Listings</div>
+      <ul class="footer-links">
+        <li><a href="/single-level-homes">Single-Level Homes</a></li>
+        <li><a href="/55-plus-communities">55+ Communities</a></li>
+        <li><a href="/guide">Free Downsizing Guide</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Areas</div>
+      <ul class="footer-links">
+        <li><a href="/west-kelowna">West Kelowna</a></li>
+        <li><a href="/lake-country">Lake Country</a></li>
+        <li><a href="/peachland">Peachland</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:12508616002">250-861-6002</a></li>
+        <li><a href="mailto:info@markjontz.com">info@markjontz.com</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 KelownaDownsizing.com — Mark Jontz &amp; Associates | Royal LePage Kelowna. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar">
+  <a href="tel:12508616002" class="sticky-cta-btn sticky-cta-call">📞 Call Now</a>
+  <a href="sms:12508616002" class="sticky-cta-btn sticky-cta-text">💬 Text Us</a>
+</div>
+
+<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+<script src="/listings.js"></script>
+<script>window.initDownsizingListings('all', 'West Kelowna');</script>
+</body>
+</html>

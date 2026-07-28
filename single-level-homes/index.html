@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single-Level Homes, Ranchers &amp; Condos for Sale in Kelowna | KelownaDownsizing</title>
+<meta name="description" content="Browse active MLS® listings for single-level homes — ranchers, bungalows, condos, and townhomes — across Kelowna, West Kelowna, Lake Country and Peachland. Updated daily.">
+<meta name="keywords" content="single level homes for sale Kelowna, ranchers for sale Kelowna, bungalows Kelowna, no stairs homes Kelowna, one level living Kelowna, condos for seniors Kelowna">
+<link rel="canonical" href="https://kelownadownsizing.com/single-level-homes">
+<meta property="og:title" content="Single-Level Homes, Ranchers & Condos for Sale in Kelowna">
+<meta property="og:description" content="Browse active MLS® listings for single-level homes across Kelowna, West Kelowna, Lake Country and Peachland.">
+<meta property="og:url" content="https://kelownadownsizing.com/single-level-homes">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script src="/schema.js" defer></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KELOWNA<span>DOWNSIZING</span></a>
+  <div class="nav-links">
+    <a href="/single-level-homes" class="active">Single-Level Homes</a>
+    <a href="/55-plus-communities">55+ Communities</a>
+    <a href="/guide">Free Guide</a>
+    <a href="/blog">Blog</a>
+    <a href="/contact">Contact</a>
+    <a href="/#valuation" class="nav-cta">Free Valuation</a>
+  </div>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/single-level-homes" onclick="toggleMenu()">Single-Level Homes</a>
+  <a href="/55-plus-communities" onclick="toggleMenu()">55+ Communities</a>
+  <a href="/guide" onclick="toggleMenu()">Free Downsizing Guide</a>
+  <a href="/blog" onclick="toggleMenu()">Blog</a>
+  <a href="/contact" onclick="toggleMenu()">Contact</a>
+  <a href="/#valuation" onclick="toggleMenu()">Free Valuation</a>
+</div>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="/">Kelowna Downsizing</a> / Single-Level Homes</div>
+  <h1>Single-Level Homes, Ranchers &amp; Condos</h1>
+  <p>Every active listing across Kelowna, West Kelowna, Lake Country &amp; Peachland suited to no-stairs, low-maintenance living — updated daily via CREA DDF®.</p>
+</div>
+
+<section class="section">
+  <div class="article-content" style="max-width:820px;margin:0 auto 44px">
+    <p>Not every listing service is built for "I don't want stairs." This page filters specifically for condos and apartments (inherently single-level living), plus houses whose listing description explicitly mentions rancher, bungalow, single-level, or one-level construction. It's a best-effort filter — MLS® data doesn't have a universal "no stairs" checkbox, so a small number of genuine single-level homes may not show up if the listing didn't use one of these terms. If you don't see what you're looking for, <a href="/contact" style="color:var(--red);font-weight:700">contact us directly</a> — we often know about single-level inventory before it's obvious from the listing description alone.</p>
+  </div>
+
+  <div class="listings-header">
+    <div class="section-eyebrow">Live MLS® Data</div>
+    <h2 class="section-title">Current Listings</h2>
+    <div id="listings-count" style="font-size:15px;color:var(--muted)">Loading listings…</div>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-btn active" data-role="type" onclick="setPropertyType(this,'all')">All Types</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'rancher')">Ranchers &amp; Bungalows</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'condo')">Condos &amp; Apartments</button>
+    <button class="filter-btn" data-role="type" onclick="setPropertyType(this,'townhouse')">Townhomes</button>
+    <select class="filter-select" id="f-price" onchange="filterPrice(this)">
+      <option value="">Any Price</option>
+      <option value="0-400000">Under $400K</option>
+      <option value="400000-600000">$400K – $600K</option>
+      <option value="600000-850000">$600K – $850K</option>
+      <option value="850000-99999999">$850K+</option>
+    </select>
+    <select class="filter-select" id="f-beds" onchange="filterBeds(this)">
+      <option value="0">Any Beds</option>
+      <option value="1">1+ Beds</option>
+      <option value="2">2+ Beds</option>
+      <option value="3">3+ Beds</option>
+    </select>
+    <button class="filter-reset" onclick="resetDownsizingFilters()">Reset</button>
+  </div>
+
+  <div class="listings-grid" id="listings-grid">
+    <div class="listings-status">Loading listings…</div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="section" style="max-width:820px">
+    <div class="section-eyebrow" style="text-align:center">Common Questions</div>
+    <h2 class="section-title" style="text-align:center;margin-bottom:44px">Single-Level Homes — FAQ</h2>
+    <div>
+      <details class="faq-item">
+        <summary>What counts as a "single-level" home?</summary>
+        <div class="faq-a">A home where all the main living space — bedrooms, bathroom, kitchen, living areas — is on one floor, with no stairs required for daily living. Some ranchers have a basement below for extra storage or a guest suite, which is fine, since the basement isn't part of daily-use living space.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are condos considered single-level?</summary>
+        <div class="faq-a">Yes — an individual condo unit is always single-level by definition, even if the building itself has multiple floors (an elevator handles the vertical movement, not the resident).</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is a rancher the same as a bungalow?</summary>
+        <div class="faq-a">In everyday BC usage, yes — both terms describe a single-story detached home. Some people use "rancher" specifically for a home with a basement below (single-level living upstairs, storage or a suite below) and "bungalow" for a slab-on-grade home with no basement at all, but this distinction isn't consistently applied.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Why don't all single-level homes show up here?</summary>
+        <div class="faq-a">MLS® data has no standard field marking a home as "single-level" or "no stairs" — this page identifies likely matches by searching each listing's description for terms like rancher, bungalow, or single-level. A listing that's genuinely single-level but doesn't use one of those words in its description may not appear. Contact us directly if you want a more thorough manual search.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Don't see the right fit yet?</h2>
+  <p>Tell us your must-haves and we'll flag new single-level listings the moment they hit the market.</p>
+  <a href="/#valuation" class="btn-white">Get Notified of New Listings →</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">KELOWNA<span>DOWNSIZING</span></div>
+      <p class="footer-desc">The Okanagan's dedicated downsizing resource — single-level homes, ranchers, condos, and 55+/45+ communities across Kelowna, West Kelowna, Lake Country &amp; Peachland.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Listings</div>
+      <ul class="footer-links">
+        <li><a href="/single-level-homes">Single-Level Homes</a></li>
+        <li><a href="/55-plus-communities">55+ Communities</a></li>
+        <li><a href="/guide">Free Downsizing Guide</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Areas</div>
+      <ul class="footer-links">
+        <li><a href="/west-kelowna">West Kelowna</a></li>
+        <li><a href="/lake-country">Lake Country</a></li>
+        <li><a href="/peachland">Peachland</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:12508616002">250-861-6002</a></li>
+        <li><a href="mailto:info@markjontz.com">info@markjontz.com</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 KelownaDownsizing.com — Mark Jontz &amp; Associates | Royal LePage Kelowna. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta-bar">
+  <a href="tel:12508616002" class="sticky-cta-btn sticky-cta-call">📞 Call Now</a>
+  <a href="sms:12508616002" class="sticky-cta-btn sticky-cta-text">💬 Text Us</a>
+</div>
+
+<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+<script src="/listings.js"></script>
+<script>window.initDownsizingListings('single-level');</script>
+</body>
+</html>
