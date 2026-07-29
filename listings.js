@@ -46,17 +46,16 @@
   }
   function isCommunityCandidate(l) {
     if (!_community) return false;
-    var streetOk = true;
-    if (_community.streetName) {
-      streetOk = (l.StreetName || '').toLowerCase().indexOf(_community.streetName.toLowerCase()) !== -1;
-      if (streetOk && _community.streetNumbers && _community.streetNumbers.length) {
-        streetOk = _community.streetNumbers.indexOf(String(l.StreetNumber)) !== -1;
-      }
+    // Street matching REQUIRES a specific street number list — street name alone (e.g. "Gordon
+    // Drive") is far too common and matches unrelated listings blocks away. Only treat it as a
+    // real match when both the street name AND one of the known civic numbers line up.
+    var streetOk = false;
+    if (_community.streetName && _community.streetNumbers && _community.streetNumbers.length) {
+      streetOk = (l.StreetName || '').toLowerCase().indexOf(_community.streetName.toLowerCase()) !== -1
+        && _community.streetNumbers.indexOf(String(l.StreetNumber)) !== -1;
     }
     var nameOk = _community.nameKeyword ? remarksMatch(l, [_community.nameKeyword.toLowerCase()]) : false;
-    // Match on street (if given) OR the community's name appearing in remarks — developments
-    // often span more than one civic address, so name-matching catches those.
-    return (_community.streetName ? streetOk : false) || nameOk;
+    return streetOk || nameOk;
   }
 
   function renderCard(l) {
