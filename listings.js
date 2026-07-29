@@ -10,8 +10,9 @@
   var _filters = { type: 'all', minPrice: 0, maxPrice: Infinity, minBeds: 0 };
   var PAGE_SIZE = 9;
   var _currentPage = 1;
-  var _mode = 'all'; // 'all' | 'single-level' | 'age-restricted'
+  var _mode = 'all'; // 'all' | 'single-level' | 'age-restricted' | 'community'
   var _cityFilter = null;
+  var _community = null; // { streetName, streetNumbers: [], nameKeyword }
 
   function formatPrice(p) { if (!p) return 'Price on Request'; return '$' + Number(p).toLocaleString('en-CA'); }
   function getPhoto(l) { if (l.Media && l.Media.length) { var m = l.Media.find(function (x) { return x.MediaURL; }); if (m) return m.MediaURL; } return null; }
@@ -43,6 +44,20 @@
   function isAgeRestrictedCandidate(l) {
     return remarksMatch(l, AGE_RESTRICTED_KEYWORDS);
   }
+  function isCommunityCandidate(l) {
+    if (!_community) return false;
+    var streetOk = true;
+    if (_community.streetName) {
+      streetOk = (l.StreetName || '').toLowerCase().indexOf(_community.streetName.toLowerCase()) !== -1;
+      if (streetOk && _community.streetNumbers && _community.streetNumbers.length) {
+        streetOk = _community.streetNumbers.indexOf(String(l.StreetNumber)) !== -1;
+      }
+    }
+    var nameOk = _community.nameKeyword ? remarksMatch(l, [_community.nameKeyword.toLowerCase()]) : false;
+    // Match on street (if given) OR the community's name appearing in remarks — developments
+    // often span more than one civic address, so name-matching catches those.
+    return (_community.streetName ? streetOk : false) || nameOk;
+  }
 
   function renderCard(l) {
     var photo = getPhoto(l);
@@ -65,6 +80,7 @@
   function applyFilters() {
     var pool = _mode === 'single-level' ? _allListings.filter(isSingleLevelCandidate)
              : _mode === 'age-restricted' ? _allListings.filter(isAgeRestrictedCandidate)
+             : _mode === 'community' ? _allListings.filter(isCommunityCandidate)
              : _allListings;
 
     if (_cityFilter) pool = pool.filter(function (l) { return l.City === _cityFilter; });
@@ -154,9 +170,10 @@
     renderListings();
   };
 
-  function loadListings(mode, cityFilter) {
+  function loadListings(mode, cityFilter, community) {
     _mode = mode || 'all';
     _cityFilter = cityFilter || null;
+    _community = community || null;
     var grid = document.getElementById('listings-grid');
     var count = document.getElementById('listings-count');
     if (!grid) return;
