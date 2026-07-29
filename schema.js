@@ -86,6 +86,8 @@
     '/leisure-village': 'Leisure Village',
     '/pinevilla-estates': 'Pinevilla Estates',
     '/chateaux-on-the-lake': 'Chateaux On The Lake',
+    '/the-maples': 'The Maples',
+    '/orchard-place-1': 'Orchard Place 1',
     '/cadence-at-the-lakes': 'Cadence at The Lakes',
     '/west-kelowna': 'West Kelowna',
     '/lake-country': 'Lake Country',
