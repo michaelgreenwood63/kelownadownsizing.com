@@ -236,3 +236,12 @@ a.complex-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,
 .footer-bottom p{font-size:12.5px;color:#888;line-height:1.75}
 @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;gap:36px}}
 @media(max-width:540px){.footer-top{grid-template-columns:1fr;gap:32px}.form-row{grid-template-columns:1fr}.section{padding:64px 20px}.hero{padding:56px 20px 64px}.filter-row{gap:8px}.listing-photo{height:190px}}
+
+/* ── COMMUNITY DIRECTORY ── */
+.directory-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:36px;margin-bottom:56px}
+.directory-city h3{font-size:17px;font-weight:900;color:var(--charcoal);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--red)}
+.directory-count{font-size:13px;font-weight:600;color:var(--muted)}
+.directory-list{list-style:none;padding:0;margin:0}
+.directory-list li{margin-bottom:9px}
+.directory-list a{font-size:14.5px;color:var(--text);line-height:1.6}
+.directory-list a:hover{color:var(--red)}

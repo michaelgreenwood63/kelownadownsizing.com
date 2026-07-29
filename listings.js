@@ -49,10 +49,16 @@
     // Street matching REQUIRES a specific street number list — street name alone (e.g. "Gordon
     // Drive") is far too common and matches unrelated listings blocks away. Only treat it as a
     // real match when both the street name AND one of the known civic numbers line up.
+    // `streets` supports multi-street communities (e.g. a complex spanning two civic addresses);
+    // `streetName`/`streetNumbers` remain supported for single-street communities.
     var streetOk = false;
-    if (_community.streetName && _community.streetNumbers && _community.streetNumbers.length) {
-      streetOk = (l.StreetName || '').toLowerCase().indexOf(_community.streetName.toLowerCase()) !== -1
-        && _community.streetNumbers.indexOf(String(l.StreetNumber)) !== -1;
+    var streetDefs = _community.streets || (_community.streetName ? [{ name: _community.streetName, numbers: _community.streetNumbers }] : []);
+    for (var i = 0; i < streetDefs.length; i++) {
+      var sd = streetDefs[i];
+      if (sd.name && sd.numbers && sd.numbers.length) {
+        if ((l.StreetName || '').toLowerCase().indexOf(sd.name.toLowerCase()) !== -1
+          && sd.numbers.indexOf(String(l.StreetNumber)) !== -1) { streetOk = true; break; }
+      }
     }
     var nameOk = _community.nameKeyword ? remarksMatch(l, [_community.nameKeyword.toLowerCase()]) : false;
     return streetOk || nameOk;
