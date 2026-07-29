@@ -32,6 +32,17 @@
           { '@type': 'City', 'name': 'West Kelowna' },
           { '@type': 'City', 'name': 'Lake Country' },
           { '@type': 'City', 'name': 'Peachland' }
+        ],
+        'parentOrganization': {
+          '@type': 'RealEstateAgent',
+          'name': 'Mark Jontz & Associates',
+          'url': 'https://www.markjontz.com'
+        },
+        'sameAs': [
+          'https://www.markjontz.com',
+          'https://kelownalistings.com',
+          'https://ownacademyway.com',
+          'https://ownsekelowna.com'
         ]
       },
       {
