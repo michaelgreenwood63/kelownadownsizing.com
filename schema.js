@@ -75,6 +75,7 @@
     '/bernard-place': 'Bernard Place',
     '/carmel-housing-society': 'Carmel Housing Society',
     '/central-mobile-home-park': 'Central Mobile Home Park',
+    '/chartwell': 'Chartwell',
     '/country-lane': 'Country Lane',
     '/gerstmar-place': 'Gerstmar Place',
     '/glenmeadows': 'GlenMeadows',
