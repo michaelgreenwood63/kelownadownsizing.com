@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Downsizing Guide 2026 — Mark Jontz and Associates</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500..900;1,9..144,500..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -27,6 +27,15 @@
     background: #d8d8d8;
     font-size: 13px;
     line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  /* This is a fixed-width print-page simulation (each .page is a literal
+     216mm/279mm sheet), not a fluid layout — on phones it behaves like a
+     PDF viewer: scroll/pinch-zoom to read, rather than reflowing. Prevents
+     the fixed page width from breaking the surrounding tab's zoom/layout. */
+  @media (max-width: 850px) {
+    html { overflow-x: auto; }
   }
 
   .page {
@@ -1295,7 +1304,7 @@
   <div class="section-rule"></div>
   <p class="section-body">Use this guide when you're standing in front of something and not sure what to do with it. Pick the category that fits and move on — don't overthink it.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px">
+  <div class="guide-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px">
     <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border)">
       <div style="background:#1B6B3A;color:white;padding:12px 20px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px">✓ Keep It</div>
       <div style="padding:14px 20px;background:white">
@@ -1369,7 +1378,7 @@
     <div class="tip-text">What do you want your monthly housing costs to look like after you downsize? Work backwards from that number. It'll help define your price range for your next home and clarify whether downsizing achieves your financial goals.</div>
   </div>
   <p class="section-body" style="margin-top:20px"><strong>Build your full budget.</strong> Include every cost associated with the move — not just the sale and purchase prices. Common items people underestimate:</p>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
+  <div class="guide-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
     <div style="background:var(--light);border-radius:8px;padding:20px">
       <div style="font-size:12px;font-weight:700;color:var(--dark);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px">One-Time Moving Costs</div>
       <div style="font-size:9px;color:var(--muted);display:flex;justify-content:flex-end;margin-bottom:4px;letter-spacing:1px;text-transform:uppercase">Est. Amount</div>
@@ -1448,7 +1457,7 @@
 
   <div style="margin-top:16px;background:var(--light);border-radius:8px;padding:16px 20px">
     <div style="font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">My Top Priorities in a New Home</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 24px">
+    <div class="guide-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:0 24px">
       <div>
         <div style="display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="font-size:10px;color:var(--muted);min-width:14px">1.</span><div style="flex:1;height:14px"></div></div>
         <div style="display:flex;align-items:baseline;gap:8px;padding:5px 0;border-bottom:1px solid var(--border)"><span style="font-size:10px;color:var(--muted);min-width:14px">2.</span><div style="flex:1;height:14px"></div></div>
