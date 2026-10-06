@@ -4,6 +4,14 @@
   // Keyword sets used since RESO/DDF has no universal "single level" or "55+" field —
   // these are best-effort matches against PublicRemarks, not guaranteed complete.
   var SINGLE_LEVEL_KEYWORDS = ['rancher', 'bungalow', 'single level', 'single-level', 'one level', 'one-level', 'no stairs', 'ranch style', 'ranch-style'];
+  // "Rancher" alone is not enough — most "walkout rancher" listings have a full finished
+  // basement level below the main floor, which is exactly the stairs a downsizer is trying
+  // to avoid. These exclude a positive match even if a SINGLE_LEVEL keyword also hit.
+  var HOUSE_MULTI_LEVEL_SIGNALS = ['walkout', 'walk-out', 'basement', 'lower level', 'bsmt', 'daylight basement', 'legal suite', 'in-law suite', 'in law suite', '2 storey', 'two storey', '2-storey', 'two-storey', '3 storey', 'three storey', '3-storey', 'three-storey', 'split level', 'split-level', 'loft area', 'upstairs', 'downstairs', 'staircase'];
+  // Narrower list for condos/apartments — "upstairs"/"basement"/"walkout" on an apartment
+  // listing usually describes a shared BUILDING amenity (rooftop lounge, parkade level,
+  // walkout patio), not stairs inside the unit, so those terms are deliberately excluded here.
+  var APARTMENT_MULTI_LEVEL_SIGNALS = ['2 storey', 'two storey', '2-storey', 'two-storey', '3 storey', 'three storey', '3-storey', 'three-storey', 'split level', 'split-level', 'loft', 'townhome style', 'townhouse style', 'staircase'];
   var AGE_RESTRICTED_KEYWORDS = ['55+', '55 plus', '45+', '45 plus', 'age restricted', 'age-restricted', 'adult oriented', 'adult-oriented', 'no rentals to families', 'bare land strata 55'];
 
   var _allListings = [];
@@ -36,9 +44,13 @@
 
   function isSingleLevelCandidate(l) {
     var st = structureType(l);
-    // Apartments/condos are inherently single-level living; houses need a remarks match
-    if (st === 'Apartment') return true;
-    if ((st === 'Single Family' || st === 'House' || st === 'Duplex') && remarksMatch(l, SINGLE_LEVEL_KEYWORDS)) return true;
+    // Apartments/condos are inherently single-level living within the unit, unless the
+    // listing itself describes a loft/townhome-style multi-level layout.
+    if (st === 'Apartment') return !remarksMatch(l, APARTMENT_MULTI_LEVEL_SIGNALS);
+    if (st === 'Single Family' || st === 'House' || st === 'Duplex') {
+      if (remarksMatch(l, HOUSE_MULTI_LEVEL_SIGNALS)) return false;
+      return remarksMatch(l, SINGLE_LEVEL_KEYWORDS);
+    }
     return false;
   }
   function isAgeRestrictedCandidate(l) {
