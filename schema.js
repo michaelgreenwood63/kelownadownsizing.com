@@ -63,6 +63,7 @@
     '/guide': 'Free Downsizing Guide',
     '/blog': 'Blog',
     '/blog/is-it-time-to-downsize': 'Is It Time to Downsize?',
+    '/blog/downsizing-to-peachland': 'Downsizing to Peachland',
     '/blog/sell-before-buy-downsizing': 'Should I Sell Before I Buy?',
     '/blog/rancher-vs-condo-downsizing': 'Rancher vs. Condo',
     '/blog/downsizing-checklist-what-to-keep': 'Downsizing Checklist',
