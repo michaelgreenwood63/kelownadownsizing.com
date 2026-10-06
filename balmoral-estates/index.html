@@ -51,8 +51,10 @@
 <section class="section">
   <div class="about-inner">
     <div class="article-content">
-      <p>Balmoral Estates is a gated 55+ community on Stillingfleet Road in Kelowna South, built out in phases between 2003 and 2008 to roughly 250 homes. Being a single, fairly large, same-era development gives it a consistent look and age of construction across the community — useful to know since building systems (roofs, mechanical) across the complex are on a broadly similar age and replacement timeline.</p>
-      <p>Its Kelowna South location puts it within reach of South Pandosy's shops and restaurants and close to Gyro Beach, while the gated, age-restricted setting keeps it quieter than the surrounding neighbourhood.</p>
+      <p>If you're considering Balmoral Estates, you're probably weighing the same things most downsizers do: will I actually like living somewhere smaller, will I know anyone, and is this the right trade-off for the equity I'd be unlocking. Here's what actually matters about this one.</p>
+      <p>Balmoral Estates is a gated 55+ community on Stillingfleet Road in Kelowna South, built out in phases between 2003 and 2008 to roughly 250 homes. Because it's a single, fairly large, same-era development, it has a consistent look and feel — and a genuine sense of neighbours who are in a similar stage of life, which is often what people find they miss most about a typical family neighbourhood once the kids are grown. Being one consistent era of construction also means building systems (roofs, mechanical) across the complex are on a broadly similar age and replacement timeline — worth asking about in any specific unit's depreciation report.</p>
+      <p>Its Kelowna South location puts it within walking distance of South Pandosy's shops, cafés, and restaurants, and close to Gyro Beach, while the gated, age-restricted setting keeps it quieter than the surrounding neighbourhood — close enough to stay connected to the city, private enough to actually feel like a change of pace.</p>
+      <p>And if the thing holding you back isn't the decision but the move itself — packing up a house's worth of belongings — we can connect you with trusted local packing, moving, and unpacking help, so that part doesn't have to fall entirely on you.</p>
     </div>
     <div>
       <div class="facts-grid">
@@ -87,9 +89,51 @@
         <summary>Is Balmoral Estates gated?</summary>
         <div class="faq-a">Yes — Balmoral Estates is a gated 55+ community in Kelowna South.</div>
       </details>
+      <details class="faq-item">
+        <summary>What are the strata fees, and what do they cover?</summary>
+        <div class="faq-a">Strata fees at Balmoral Estates were around $263/month as of 2024 (confirm the current figure on any specific unit — it varies slightly by size). That covers the contingency reserve, management, road maintenance, snow and trash removal, and use of the clubhouse — which includes a pool, hot tub, and exercise room.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are pets allowed?</summary>
+        <div class="faq-a">Yes, with restrictions — pets under roughly 18" are generally welcome, which covers most small-to-medium dogs and cats. Always worth confirming current bylaws on the specific unit you're considering, since strata rules can be amended.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Will I actually know anyone here?</summary>
+        <div class="faq-a">It's one of the more common hesitations we hear, and it's a fair one. Balmoral's clubhouse (pool, hot tub, exercise room) tends to be where that happens naturally — being one consistent age-restricted community of 250 homes means your neighbours are genuinely in a similar stage of life, which is different from a typical family-oriented street.</div>
+      </details>
     </div>
   </div>
 </section>
+
+<!-- LEAD FORM -->
+<div class="lead-section" id="complex-valuation">
+  <div class="lead-inner" style="grid-template-columns:1fr;max-width:560px">
+    <div class="lead-box">
+      <div class="lead-box-label">Balmoral Estates</div>
+      <div class="lead-icon">🏡</div>
+      <h3>Thinking About Balmoral Estates?</h3>
+      <p>Tell us a bit about what you need, and we'll follow up directly — whether that's current listings, your own home's value, or just talking through whether this community's a fit.</p>
+      <div data-fs-success class="lead-success-msg">✓ Got it — we'll reach out within one business day.</div>
+      <div data-fs-error class="lead-error-msg">Something went wrong. Please call <a href="tel:12508616002">250-861-6002</a>.</div>
+      <form id="complex-lead-form">
+        <input type="hidden" name="form_source" value="kelownadownsizing.com — Balmoral Estates page">
+        <input type="hidden" name="community" value="Balmoral Estates">
+        <div class="form-group"><label for="c-name">Your Name</label><input type="text" id="c-name" name="name" placeholder="Your name" required data-fs-field></div>
+        <div class="form-group"><label for="c-email">Email</label><input type="email" id="c-email" name="email" placeholder="you@email.com" required data-fs-field></div>
+        <div class="form-group"><label for="c-phone">Phone</label><input type="tel" id="c-phone" name="phone" placeholder="250-555-0100" data-fs-field></div>
+        <div class="form-group"><label for="c-interest">What do you need?</label>
+          <select id="c-interest" name="interest" data-fs-field>
+            <option value="">No preference</option>
+            <option>Current listings at Balmoral Estates</option>
+            <option>What's my current home worth?</option>
+            <option>Just researching for now</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" data-fs-submit-btn>Get In Touch →</button>
+      </form>
+    </div>
+  </div>
+</div>
 
 <div class="cta-band">
   <h2>Considering Balmoral Estates?</h2>
@@ -141,7 +185,11 @@
   <a href="sms:12508616002" class="sticky-cta-btn sticky-cta-text">💬 Text Us</a>
 </div>
 
-<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}
+window.formspree = window.formspree || function(){ (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#complex-lead-form', formId: 'xbdnbqrn' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="/listings.js"></script>
 <script>window.initDownsizingListings('community', "Kelowna", {streetName: "Stillingfleet", nameKeyword: "balmoral", streetNumbers: ['2365']});</script>
 </body>
