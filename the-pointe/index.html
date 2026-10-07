@@ -86,6 +86,36 @@
   </div>
 </section>
 
+<!-- LEAD FORM -->
+<div class="lead-section" id="complex-valuation">
+  <div class="lead-inner" style="grid-template-columns:1fr;max-width:560px">
+    <div class="lead-box">
+      <div class="lead-box-label">The Pointe</div>
+      <div class="lead-icon">🏡</div>
+      <h3>Thinking About The Pointe?</h3>
+      <p>Tell us a bit about what you need, and we'll follow up directly — whether that's current listings, your own home's value, or just talking through whether this community's a fit.</p>
+      <div data-fs-success class="lead-success-msg">✓ Got it — we'll reach out within one business day.</div>
+      <div data-fs-error class="lead-error-msg">Something went wrong. Please call <a href="tel:12508616002">250-861-6002</a>.</div>
+      <form id="complex-lead-form">
+        <input type="hidden" name="form_source" value="kelownadownsizing.com — The Pointe page">
+        <input type="hidden" name="community" value="The Pointe">
+        <div class="form-group"><label for="c-name">Your Name</label><input type="text" id="c-name" name="name" placeholder="Your name" required data-fs-field></div>
+        <div class="form-group"><label for="c-email">Email</label><input type="email" id="c-email" name="email" placeholder="you@email.com" required data-fs-field></div>
+        <div class="form-group"><label for="c-phone">Phone</label><input type="tel" id="c-phone" name="phone" placeholder="250-555-0100" data-fs-field></div>
+        <div class="form-group"><label for="c-interest">What do you need?</label>
+          <select id="c-interest" name="interest" data-fs-field>
+            <option value="">No preference</option>
+            <option>Current listings at The Pointe</option>
+            <option>What's my current home worth?</option>
+            <option>Just researching for now</option>
+          </select>
+        </div>
+        <button type="submit" class="form-submit" data-fs-submit-btn>Get In Touch →</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <div class="cta-band">
   <h2>Considering The Pointe?</h2>
   <p>We can walk you through current listings, bylaws, and financing considerations specific to this community.</p>
@@ -134,7 +164,11 @@
   <a href="sms:12508616002" class="sticky-cta-btn sticky-cta-text">💬 Text Us</a>
 </div>
 
-<script>function toggleMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}</script>
+<script>function toggleMenu(){{var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='flex'?'none':'flex';}}
+window.formspree = window.formspree || function(){{ (formspree.q = formspree.q || []).push(arguments); }};
+formspree('initForm', {{ formElement: '#complex-lead-form', formId: 'xbdnbqrn' }});
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <script src="/listings.js"></script>
 <script>window.initDownsizingListings('community', "West Kelowna", {streetName: "Gellatly", nameKeyword: "the pointe", streetNumbers: ["4074"]});</script>
 </body>
