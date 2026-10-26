@@ -144,7 +144,7 @@
     if (!grid) return;
     var filtered = applyFilters();
     if (!filtered.length) {
-      grid.innerHTML = '<div class="listings-status">No active listings currently match these filters. Try widening your search, or <a href="/contact" style="color:var(--red);font-weight:700">contact us</a> — we often know about upcoming listings before they hit MLS®.</div>';
+      grid.innerHTML = '<div class="listings-status">No active listings currently match these filters. Try widening your search, or <a href="/contact" style="color:var(--red);font-weight:700">contact us</a>: we often know about upcoming listings before they hit MLS®.</div>';
       if (count) count.textContent = '0 listings';
       var oldNav = grid.parentNode ? grid.parentNode.querySelector('.pagination') : null;
       if (oldNav) oldNav.remove();
@@ -199,12 +199,12 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (!data.configured) { grid.innerHTML = '<div class="listings-status">Listings coming soon.</div>'; return; }
-        if (data.error) { grid.innerHTML = '<div class="listings-status">Unable to load listings right now — <a href="/contact" style="color:var(--red);font-weight:700">contact us</a> for current availability.</div>'; return; }
+        if (data.error) { grid.innerHTML = '<div class="listings-status">Unable to load listings right now. <a href="/contact" style="color:var(--red);font-weight:700">Contact us</a> for current availability.</div>'; return; }
         _allListings = data.listings || [];
         renderListings();
       })
       .catch(function () {
-        grid.innerHTML = '<div class="listings-status">Unable to load listings right now — <a href="/contact" style="color:var(--red);font-weight:700">contact us</a> for current availability.</div>';
+        grid.innerHTML = '<div class="listings-status">Unable to load listings right now. <a href="/contact" style="color:var(--red);font-weight:700">Contact us</a> for current availability.</div>';
       });
   }
 
