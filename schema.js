@@ -20,7 +20,7 @@
         'url': BASE,
         'telephone': '+12508616002',
         'email': 'info@markjontz.com',
-        'description': 'Mark Jontz & Associates at Royal LePage Kelowna — downsizing specialists covering single-level homes, ranchers, condos, and 55+/45+ communities across Kelowna, West Kelowna, Lake Country, and Peachland.',
+        'description': 'Mark Jontz & Associates at Royal LePage Kelowna: downsizing specialists covering single-level homes, ranchers, condos, and 55+/45+ communities across Kelowna, West Kelowna, Lake Country, and Peachland.',
         'address': {
           '@type': 'PostalAddress',
           'addressLocality': 'Kelowna',
@@ -50,7 +50,7 @@
         '@id': BASE + '#website',
         'name': 'Kelowna Downsizing',
         'url': BASE,
-        'description': 'The downsizing resource for Kelowna and the surrounding Central Okanagan — single-level homes, ranchers, condos, and 55+/45+ communities.',
+        'description': 'The downsizing resource for Kelowna and the surrounding Central Okanagan: single-level homes, ranchers, condos, and 55+/45+ communities.',
         'publisher': { '@id': BASE + '#business' },
         'inLanguage': 'en-CA'
       }
@@ -160,20 +160,20 @@
   };
 
   var HOMEPAGE_FAQS = [
-    ["What does \"downsizing\" actually mean?", "Downsizing means moving from a larger home to a smaller, lower-maintenance property — typically a condo, rancher, bungalow, or townhome — often to reduce upkeep, unlock home equity, or simplify life in retirement."],
-    ["Should I sell my current home before I buy a new one?", "Not necessarily — our Homesafe program lets you secure your next home first, with both closings coordinated on the same day, avoiding bridge financing and a rushed sale."],
+    ["What does \"downsizing\" actually mean?", "Downsizing means moving from a larger home to a smaller, lower-maintenance property, typically a condo, rancher, bungalow, or townhome, often to reduce upkeep, unlock home equity, or simplify life in retirement."],
+    ["Should I sell my current home before I buy a new one?", "Not necessarily. Our Homesafe program lets you secure your next home first, with both closings coordinated on the same day, avoiding bridge financing and a rushed sale."],
     ["What is a 55+ or 45+ community?", "A strata development with an age-restriction bylaw, typically requiring at least one resident per unit to be above the stated age, with no children as permanent residents."],
-    ["What's the difference between a rancher and a bungalow?", "Largely interchangeable in everyday BC usage — both describe a single-story detached home with no stairs to the main living area."],
-    ["How much does it cost to downsize in Kelowna?", "It depends on your current home's value versus your target property, plus selling costs (typically ~5%) and moving costs — for many long-time owners, downsizing releases equity rather than costing money outright."],
-    ["Do I need a REALTOR® who specializes in downsizing?", "Not strictly, but it helps — downsizing involves different considerations (timing two transactions, 55+ strata bylaws, matching lifestyle to property type) than a typical move."]
+    ["What's the difference between a rancher and a bungalow?", "Largely interchangeable in everyday BC usage: both describe a single-story detached home with no stairs to the main living area."],
+    ["How much does it cost to downsize in Kelowna?", "It depends on your current home's value versus your target property, plus selling costs (typically ~5%) and moving costs. For many long-time owners, downsizing releases equity rather than costing money outright."],
+    ["Do I need a REALTOR® who specializes in downsizing?", "Not strictly, but it helps: downsizing involves different considerations (timing two transactions, 55+ strata bylaws, matching lifestyle to property type) than a typical move."]
   ];
 
   var SENIOR_LIVING_FAQS = [
-    ["What's the difference between downsizing and assisted living?", "Downsizing means buying or selling a smaller, lower-maintenance home — a real estate transaction we handle directly. Assisted living is a licensed care service (help with medication, bathing, meals) delivered through a monthly rental, not something bought or sold on MLS®. Many people searching \"assisted living\" are really in the downsizing stage first and haven't needed care services yet — see the breakdown above for which category actually fits."],
-    ["Does Homesafe work if I'm moving into assisted living instead of buying a home?", "Yes — Homesafe's \"subject to finding another suitable property\" clause is structured around whatever your real next step is, including a retirement residence move-in date instead of a second closing. We coordinate your home sale timeline around the residence's own move-in process so you're not carrying two housing costs or rushed into a decision."],
-    ["Do you get a referral fee from the retirement residences you list?", "No — we don't take referral fees from any residence in our directory. What we do have is genuine working familiarity with how these communities operate (move-in timelines, waitlists, what each one actually offers), built from helping clients through this transition before. That's relationship and experience, not a financial arrangement."],
-    ["How much does assisted living cost in Kelowna?", "Rental-model assisted living residences across the Central Okanagan commonly range from roughly $2,500 to $5,000+ per month depending on the level of care and the specific residence — confirm current rates directly with any residence you're considering, since they change."],
-    ["Is assisted living the same as a 55+ retirement community?", "No. A 55+ community (what our 55+ Communities page covers) is a real estate purchase — you buy a home in an age-restricted strata with no included care services. Assisted living is a licensed rental arrangement that includes daily support. Someone fully independent who just wants less house fits a 55+ community; someone needing help with daily tasks fits assisted living."]
+    ["What's the difference between downsizing and assisted living?", "Downsizing means buying or selling a smaller, lower-maintenance home: a real estate transaction we handle directly. Assisted living is a licensed care service (help with medication, bathing, meals) delivered through a monthly rental, not something bought or sold on MLS®. Many people searching \"assisted living\" are really in the downsizing stage first and haven't needed care services yet; see the breakdown above for which category actually fits."],
+    ["Does Homesafe work if I'm moving into assisted living instead of buying a home?", "Yes, Homesafe's \"subject to finding another suitable property\" clause is structured around whatever your real next step is, including a retirement residence move-in date instead of a second closing. We coordinate your home sale timeline around the residence's own move-in process so you're not carrying two housing costs or rushed into a decision."],
+    ["Do you get a referral fee from the retirement residences you list?", "No, we don't take referral fees from any residence in our directory. What we do have is genuine working familiarity with how these communities operate (move-in timelines, waitlists, what each one actually offers), built from helping clients through this transition before. That's relationship and experience, not a financial arrangement."],
+    ["How much does assisted living cost in Kelowna?", "Rental-model assisted living residences across the Central Okanagan commonly range from roughly $2,500 to $5,000+ per month depending on the level of care and the specific residence. Confirm current rates directly with any residence you're considering, since they change."],
+    ["Is assisted living the same as a 55+ retirement community?", "No. A 55+ community (what our 55+ Communities page covers) is a real estate purchase: you buy a home in an age-restricted strata with no included care services. Assisted living is a licensed rental arrangement that includes daily support. Someone fully independent who just wants less house fits a 55+ community; someone needing help with daily tasks fits assisted living."]
   ];
 
   if (path === '/' || path === '/senior-living-options') {
